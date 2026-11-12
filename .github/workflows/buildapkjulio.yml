@@ -32,11 +32,6 @@ jobs:
       - name: Instalar plataforma e build-tools do Android
         run: sdkmanager --install "platforms;android-35" "build-tools;35.0.0"
 
-      - name: Usar chave de debug fixa (mantém a assinatura entre builds)
-        run: |
-          mkdir -p ~/.android
-          cp ci/debug.keystore ~/.android/debug.keystore
-
       - name: Instalar dependências
         run: npm install --no-audit --no-fund
 
